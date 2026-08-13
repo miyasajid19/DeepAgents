@@ -45,7 +45,7 @@ agent = create_deep_agent(
     skills=["/skills"],
 )
 
-result = agent.invoke({"messages": [HumanMessage(content="use your skill and memory and summarize it")]})
+result = agent.invoke({"messages": [HumanMessage(content="hi")]})
 
 from rich import print
 print(result)
