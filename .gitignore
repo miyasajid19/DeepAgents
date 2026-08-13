@@ -1,2 +1,4 @@
 .env
 .venv
+*.md
+__pycache__/
