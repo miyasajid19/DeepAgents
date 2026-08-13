@@ -3,6 +3,9 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import os
 load_dotenv()
+from deepagents import CompiledSubAgent
+from langchain.agents import create_agent
+
 
 def internet_search(query: str) -> str:
     """Run a web search"""
@@ -21,13 +24,24 @@ research_subagent = {
     "model": model,  # Optional model override
 }
 
-coding_subagent = {
-    "name": "coding-agent",
-    "description": "Used to write and debug code.",
-    "system_prompt": "You are a coding expert.",
-    "tools": [],  # Add coding-related tools here
-    "model": model,  # Optional model override
-}
+# coding_subagent = {
+#     "name": "coding-agent",
+#     "description": "Used to write and debug code.",
+#     "system_prompt": "You are a coding expert.",
+#     "tools": [],  # Add coding-related tools here
+#     "model": model,  # Optional model override
+# }
+coding_agent_graph=create_agent(
+    model=model,
+    tools=[],
+    system_prompt="You are a coding expert.",
+)
+
+coding_subagent = CompiledSubAgent(
+    name="coding-agent",
+    description="Used to write and debug code.",
+    runnable=coding_agent_graph,
+)
 
 joke_subagent = {
     "name": "joke-agent",
