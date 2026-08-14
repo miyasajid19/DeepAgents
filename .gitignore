@@ -2,3 +2,4 @@
 .venv
 *.md
 __pycache__/
+workspace/
