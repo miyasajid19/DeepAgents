@@ -58,7 +58,12 @@ agent = create_deep_agent(
     backend=backend,
     checkpointer=checkpointer,
 )
+agent1 = create_deep_agent(
+    model=model,
+    checkpointer=checkpointer,
+)
 
+print("agent and agent1 are created with state backend and in-memory checkpointer.StateBackend is the default even though you don't pass it in the create_deep_agent function. You can use the agent to make requests and it will automatically save the state to the backend and checkpointer.")
 
 # ============================================================
 # 6. Thread configuration
