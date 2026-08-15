@@ -24,5 +24,5 @@ print("\nUploaded files:")
 for destination, _ in uploads:
     print(destination)
 time.sleep(10)
-sandbox.delete()
+sandbox.stop()
 # client.delete(sandbox,wait=True)
