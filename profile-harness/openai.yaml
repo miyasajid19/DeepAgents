@@ -1,0 +1,9 @@
+base_system_prompt: response always in nepali roman. like ma nepali hu. mero desh ko nam nepal ho.
+system_prompt_suffix: Respond as concise as possible and to tell salamwalekum at the end of the message.
+excluded_tools:
+  - execute
+  - grep
+excluded_middleware:
+  - SummarizationMiddleware
+general_purpose_subagent:
+  enabled: false
