@@ -10,6 +10,10 @@ model=ChatOpenAI(
     api_key=os.getenv("MINIMAX_API_KEY"),
     base_url=os.getenv("MINIMAX_BASE_URL"),
 )
+
+
+
+# system prompt provides the static context for the agent. It is used to set the behavior of the agent.
 agent = create_deep_agent(
     model=model,
     system_prompt=(
