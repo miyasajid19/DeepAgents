@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "supervisor": "./src/supervisor.py:graph",
+    "researcher": "./src/researcher.py:graph",
+    "coder": "./src/coder.py:graph"
+  }
+}
