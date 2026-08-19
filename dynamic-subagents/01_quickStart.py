@@ -45,3 +45,9 @@ if __name__ == "__main__":
     }))
     print("===="*10)
     print(agent.invoke({"messages":[{"role":"user","content":"write a python function to add two numbers"}]}))
+    
+    
+    
+    
+    
+    # To trigger dynamic subagents, prompt the agent with the word “workflow”
