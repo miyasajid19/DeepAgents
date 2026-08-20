@@ -1,0 +1,29 @@
+# Core / shared
+python-dotenv>=1.0.1
+pydantic>=2.9.0
+pyyaml>=6.0.2
+rich>=13.9.4
+httpx>=0.27.2
+
+# LangChain ecosystem
+langchain>=0.3.20
+langchain-core>=0.3.40
+langchain-openai>=0.2.10
+langchain-mcp-adapters>=0.1.0
+langchain-quickjs>=0.1.0
+langchain-daytona>=0.0.8
+
+# LangGraph
+langgraph>=0.2.74
+langgraph-checkpoint>=2.0.0
+langgraph-sdk>=0.1.55
+
+# Deepagents
+deepagents>=0.1.0
+
+# Search / tools
+tavily-python>=0.5.0
+
+# MCP / Daytona
+mcp>=1.6.0
+daytona>=0.20.0
